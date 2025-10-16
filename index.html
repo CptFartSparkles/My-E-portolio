@@ -1,0 +1,115 @@
+<!--
+    SCENARIO
+You are a junior web developer who has just completed a training program. As part of your
+professional development, you need to create a personal e-portfolio website that showcases
+your skills, projects, and contact details. This e-portfolio will serve as your online resume and
+must be visually appealing, user-friendly, and responsive.
+
+    Instructions:
+        • You have to create an e-portfolio about yourself.
+        • The e-portfolio must consist of at least 5 pages (details below).
+        • The e-portfolio must be user-friendly and eye-catching.
+        • Styling must be consistent throughout the e-portfolio
+
+    E-portfolio Requirements:
+        1. Homepage
+            • Contains your full name and a short introduction
+            • A professional profile picture
+            • A navigation menu linking to all sections/pages
+        2. About Me Section
+            • A heading and a short biography
+            • A list of your skills (use lists)
+            • Use semantic HTML structure
+        3. Projects/Portfolio Section 
+            • At least two project showcases
+            • Each project should include:
+                o Title
+                o Short description
+                o Image or screenshot
+                o A link (external or placeholder)
+
+            4. Education & Experience Section
+                • A table that displays your education history
+                • A timeline/list for work experience
+                • Proper use of headings and formatting
+            5. Contact Page
+                • A form that includes:
+                    o Name
+                    o Email
+                    o Message text area
+                    o Submit button
+                • Contact details such as email, phone, and location
+            6. CSS Styling
+                • Use an external CSS file
+                • Apply background colours/images, typography, and spacing
+                • Create a styled navigation menu with hover effects
+                • Use CSS layout (Flexbox or Grid) to structure content
+
+-->
+
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="./Style.css">
+    </head>
+    <body>
+        <div class="pageCont">
+
+            <section class="WSpace">
+                <!--Whitespace-->
+            </section>
+            <section class="Main">
+                <div class="topCont">
+                    <div class="photo">Image</div>
+                    <div class="namebox">
+                        <h1 class="name">Hendrik van der Linde</h1>
+                        <div class="role">Aspiring Software & Game Developer</div>
+                    </div>
+                </div>
+                <main class="mainCont">
+                    <div class="sec1">
+                        <h4>My Showcases</h4>
+                        <div class="projDiv">
+                            <div class="projCont">
+                                <div id="projPA">
+                                    1
+                                </div>
+                                <div id="projPA">
+                                    2
+                                </div>
+                                <div id="projPA">
+                                    3
+                                </div>
+                        </div>
+                    </div>
+                        <div>Socials</div>
+                    </div>
+                    <div class="sec2">
+                        <h4>My Info</h4>
+                        <a class="sideButton" href="Pages/about.html">About Me</a>
+                        <a class="sideButton" href="Pages/infomation.html">Education & Experience</a>
+                        <a class="sideButton" href="Pages/contact.html">Contact<a>
+
+                    </div>
+                </main>
+            </section>
+            <section class="WSpace">
+                <!--whitespace-->
+            </section>
+        </div>
+        
+        
+    </body>
+    <footer>
+        
+    </footer>
+</html>
