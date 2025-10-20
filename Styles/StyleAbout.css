@@ -50,8 +50,8 @@ p{
 }
 
 .pageCont{
-    max-height: 100vh;
-    min-width: 80vw;
+    max-height: 100%;
+    width: 100vw;
     display: flex;
     flex-direction: row;
     justify-items: center;
@@ -67,14 +67,14 @@ p{
 
 
 .WSpace {
-    width: 10%;
+    width: 15%;
     min-height: 100%;
 }
 
 .Main {
     background: linear-gradient(46deg,rgba(255, 128, 0, 0.76) 0%, rgba(237, 135, 97, 0.9) 50%, rgba(255, 0, 200, 0.85) 100%);
-    width: 100%;
-    min-height: fit-content;
+    width: 100vw;
+    height: 100vh;
     border-left: 4px solid rgba(21, 255, 0, 0.488);
     border-right:  4px solid rgba(255, 0, 234, 0.514);
     border-bottom:  4px solid rgba(0, 106, 255, 0.488);
@@ -83,60 +83,79 @@ p{
 
 .topCont {
     display: flex;
+    flex-direction: column;
     border-bottom: 5px solid rgba(0, 106, 255, 0.488);
     justify-items: center;
     align-items: center;
     background: linear-gradient(79deg,rgba(255, 128, 0, 0.34) 0%, rgba(237, 135, 97, 0.37) 50%, rgba(255, 0, 200, 0.27) 100%);
     width: 100%;
-    height: 10%;
+    height: 25%;
 }
 
 
 .mainCont {
+    width: 100%;
     background: linear-gradient(134deg,rgba(255, 128, 0, 0.34) 0%, rgba(237, 135, 97, 0.37) 50%, rgba(255, 0, 200, 0.27) 100%);
-    min-height: fit-content;
+    height: 70%;
     display: flex;
+    flex-direction: row;
 }
 
 .sec1 {
     background: linear-gradient(60deg,rgba(255, 128, 0, 0.34) 0%, rgba(237, 135, 97, 0.37) 65%, rgba(255, 0, 200, 0.14) 100%);
-    display: flex;
-    flex-direction: column;
-    max-width: 60%;
-height: 100%;
+    width: 75%;
+    height: 100%;
     margin: 1px;
     border-right: 3px solid rgba(21, 255, 0, 0.488);
     color: wheat;
 }
 
-nav ul li {
-  display: inline-block;
-}
-nav ul li a {
-  color: rgba(255, 255, 255, 0.45);
-  font-size: 0.875rem;
-  display: block;
-  text-decoration: none;
-padding: 6px 15px;
-}
-
-.sec1 .sec1head {
-    display: table;
+.sec1 .tabNavbar{
+    display: flex;
+    flex-wrap: wrap;
     width: 95%;
-    height: 10%;
+    height: 95%;
     background: linear-gradient(11deg,rgba(255, 128, 0, 0.52) 0%, rgba(255, 62, 103, 0.64) 50%, rgba(255, 0, 200, 0.54) 100%);
-    margin: 0 auto;
     border: 3px solid rgba(20, 13, 33, 0.785);
     border-radius: 10px;
 }
-.sec1 ul{
-    width: 100%;
-    margin: 0;
-    padding: 0;
+
+.sec1 .tabNavbar input[type="radio"]{
+    display: none;
 }
 
-.sec1 .listItem{
-    margin: 1em;
+.sec1 .tabNavbar label{
+    text-align: center;
+    padding: auto;
+    width: 30%;
+    height: 5%;
+    margin: auto;
+    border-radius: 1em;
+    border: 0.2em solid rgba(0, 106, 255, 0.488);
+    transition: 2s;
+}
+
+
+.sec1 .tabNavbar label:hover{
+    transform: scale(110%);
+    background-color: rgba(250, 235, 215, 0.24);
+    border: 0.1em solid rgba(106, 255, 156, 0.488);
+}
+
+
+.sec1 .tabNavbar .tab{
+    height: 80%;
+    order: 1;
+    display: none;
+    transition: 3s;
+}
+
+.sec1 .tabNavbar .tab p{
+    font-size: larger;
+}
+
+.sec1 .tabNavbar input[type="radio"]:checked + label + .tab{
+    display: block;
 }
 
 .navButton{
@@ -155,59 +174,6 @@ padding: 6px 15px;
   border: 2px solid linear-gradient(228deg,rgba(255, 128, 0, 0.52) 0%, rgba(255, 62, 103, 0.64) 50%, rgba(255, 0, 200, 0.54) 100%);
 }
 
-.sections{
-    margin: auto;
-    width: 95%;
-    height: 100%;
-    display: table;
-    align-items: center;
-    z-index: -1;
-}
-
-.sec1 section{
-    height: 100%;
-    width: 0%;
-    transform: translate3d(-400%, 0, 0);
-    display:table-cell;
-    margin: auto;
-    z-index: 0;
-    visibility: hidden;
-    transition: 1s;
-}
-
-.sec1 section p{
-    padding: auto;
-}
-
-#section1{
-    background: linear-gradient(30deg,rgba(255, 128, 0, 1) 0%, rgba(237, 135, 97, 0.37) 50%, rgba(255, 0, 200, 1) 100%);
-}
-
-#section1:target{
-    transform: translate3d(0,0,0);
-    width: 100%;
-    visibility: visible;
-}
-
-#section2{
-    background: linear-gradient(88deg,rgba(255, 128, 0, 1) 0%, rgba(237, 135, 97, 0.37) 50%, rgba(255, 0, 200, 1) 100%);
-}
-
-#section2:target{
-    transform: translate3d(0,0,0);
-    width: 100%;
-    visibility: visible;
-}
-
-#section3{
-    background: linear-gradient(169deg,rgba(255, 128, 0, 1) 0%, rgba(237, 135, 97, 0.37) 50%, rgba(255, 0, 200, 1) 100%);
-}
-
-#section3:target{
-    transform: translate3d(0,0,0);
-    width: 100%;
-    visibility: visible;
-}
 
 .sec2 {
     display: flex;
@@ -218,8 +184,8 @@ padding: 6px 15px;
     background: linear-gradient(30deg,rgba(255, 128, 0, 0.34) 0%, rgba(237, 135, 97, 0.37) 20%, rgba(255, 0, 200, 0.14) 100%);
     border: 3px solid rgba(14, 9, 22, 0.785);
     border-radius: 15px;
-    min-width: 30%;
-    height: 100%;
+    width: 20%;
+    height: 80%;
     color: wheat;
 }
 
