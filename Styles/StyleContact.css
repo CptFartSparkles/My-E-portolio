@@ -25,22 +25,29 @@ a {
 h1{
     margin: 20px auto;
     padding: 0;
-    color: rgb(181, 0, 163);
+    color: rgb(0, 26, 96);
     font-family:Verdana, Geneva, Tahoma, sans-serif;
     font-size: xx-large;
+}
+
+h2{
+    margin: 0;
+    padding: 0;
+    color: rgb(0, 113, 125);
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
 }
 
 h3{
     margin: 0;
     padding: 0;
-    color: wheat;
+    color: rgb(0, 59, 113);
     font-family:Verdana, Geneva, Tahoma, sans-serif;
 }
 
 h4{
     margin: 0;
     padding: 0;
-    color: wheat;
+    color: rgb(0, 70, 136);
     font-family:Verdana, Geneva, Tahoma, sans-serif;
 }
 
@@ -110,7 +117,13 @@ p{
     color: wheat;
 }
 
-.sec1 .tabNavbar{
+.sec1 .container{
+    width: 95%;
+    height: 95%;
+    margin:  1em auto;
+}
+
+.sec1 .formTabs{
     display: flex;
     flex-wrap: wrap;
     width: 95%;
@@ -120,60 +133,61 @@ p{
     border-radius: 10px;
 }
 
-.sec1 .tabNavbar input[type="radio"]{
+.sec1 .formTabs input[type="radio"]{
     display: none;
 }
 
-.sec1 .tabNavbar label{
+.sec1 .formTabs label{
     text-align: center;
-    padding: auto;
+    margin: 0 auto;
     width: 30%;
-    height: 5%;
-    margin: auto;
+    height: 10%;
     border-radius: 1em;
     border: 0.2em solid rgba(0, 106, 255, 0.488);
     transition: 2s;
 }
 
 
-.sec1 .tabNavbar label:hover{
+.sec1 .formTabs label:hover{
     transform: scale(110%);
     background-color: rgba(250, 235, 215, 0.24);
     border: 0.1em solid rgba(106, 255, 156, 0.488);
 }
 
 
-.sec1 .tabNavbar .tab{
+.sec1 .formTabs .tab{
+    width: 70%;
     height: 80%;
+    margin: 0 auto;
     order: 1;
     display: none;
     transition: 3s;
 }
 
-.sec1 .tabNavbar .tab p{
+.sec1 .formTabs .tab table{
+    margin: auto;
+    width: 90%;
+    height: 80%;
+    text-align: center;
+    border: 2px solid white;
+}
+
+.sec1 .formTabs .tab table .tableHead{
+    width: 50%;
+    border-bottom: 2px solid wheat;
+}
+
+.sec1 .formTabs .tab table .tableDetail{
+    height: 30%;
+}
+
+.sec1 .formTabs .tab p{
     font-size: larger;
 }
 
-.sec1 .tabNavbar input[type="radio"]:checked + label + .tab{
+.sec1 .formTabs input[type="radio"]:checked + label + .tab{
     display: block;
 }
-
-.navButton{
-    text-align: center;
-    transition: 3s;
-    height: 60%;
-    width: 90%;
-    margin: auto;
-    border-radius: 10px;
-    color: aquamarine;
-    background: linear-gradient(140deg,rgba(255, 128, 0, 0.10) 0%, rgba(255, 62, 103, 0.10) 50%, rgba(255, 0, 200, 0.10) 100%);
-}
-
-.navButton:hover{
-  background: linear-gradient(50deg,rgba(255, 128, 0, 0.52) 0%, rgba(255, 62, 103, 0.64) 50%, rgba(255, 0, 200, 0.54) 100%);
-  border: 2px solid linear-gradient(228deg,rgba(255, 128, 0, 0.52) 0%, rgba(255, 62, 103, 0.64) 50%, rgba(255, 0, 200, 0.54) 100%);
-}
-
 
 .sec2 {
     display: flex;
